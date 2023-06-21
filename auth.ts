@@ -12,6 +12,7 @@ export const {
   callbacks: {
     // @ts-ignore
     jwt: async ({ token, profile }) => {
+      console.log('kahiro debug auth', token, profile)
       if (profile?.id) {
         token.id = profile.id
         token.image = profile.picture

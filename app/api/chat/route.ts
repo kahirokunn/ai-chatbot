@@ -11,6 +11,7 @@ export async function POST(req: Request) {
   const json = await req.json()
   const { messages, previewToken } = json
   const session = await auth()
+  console.log('kahiro debug session', session)
 
   if (process.env.VERCEL_ENV !== 'preview') {
     if (session == null) {
